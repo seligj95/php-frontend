@@ -1,5 +1,9 @@
 <?php
 
-$data = file_get_contents("https://backend-rhcxqejcouqy2.azurewebsites.net/");
+$data = file_get_contents("https://mybackend405340.azurewebsites.net");
 
-var_dump($data);
+if ( strlen( $data ) === 0 ) {
+    echo "ERROR: Can't reach backend";
+} else {
+    echo $data;
+}
